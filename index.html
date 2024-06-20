@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h6>INPUT YOUR NUMBERS IN THE INPUT FIELD AND CLICK THE BUTTON</h6>
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <input type="button" id="btn" value="Click me" />
+    <div id="para1"></div>
+  </body>
+
+  <script>
+    let inputValue1 = 0;
+    const txt1 = document.getElementById("input1");
+    const txt2 = document.getElementById("input2");
+    const out1 = document.getElementById("para1");
+    const out2 = document.getElementById("para2");
+    const btn1 = document.getElementById("btn");
+    function myfunction() {
+      for (
+        let index = Number(txt1.value);
+        index <= Number(txt2.value);
+        index++
+      ) {
+        for (let i = 1; i <= 12; i++) {
+          out1.innerHTML += `<p> ${index} x ${i} = ${index * i}</p>`;
+        }
+      }
+    }
+    btn1.addEventListener("click", myfunction);
+  </script>
+</html>
